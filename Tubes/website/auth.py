@@ -3,7 +3,6 @@ auth = Blueprint('auth',__name__)
 
 @auth.route('/login')
 def login():
-    # anjing
     return "<p>Login</p>"
 
 @auth.route('/logout')

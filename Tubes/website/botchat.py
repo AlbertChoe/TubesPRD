@@ -7,9 +7,12 @@ def botchat():
     if request.method == 'POST':
         input_text = request.form['input_text']
         response = openai.Completion.create(
-            engine="text-davinci-002",
-            prompt=f"Respon yang tepat untuk curhatan ini adalah: {input_text}. Kata-kata yang mungkin cocok untuk respon adalah:",
-            max_tokens=100,
+            engine="text-davinci-003",
+            prompt=f"""Bertindak sebagai psikolog, beri respon untuk curhatan dengan benar dan sopan. Berikan saran yang tidak akan membuat user semakin sakit hati dan sedih. Jika user meminta sesuatu usahakan kamu dapat memberikan yang diminta user dan membantu menyelesaikan masalah yang ditanyakan (baik dalam kata kata ataupun bentuk lain)
+            User :{input_text}
+            AI :
+            """,
+            max_tokens=500,
             n=1,
             stop=None,
             temperature=0.5,

@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %}Botchat{% endblock %} {% block
+    content %}
+
+<head>
+    <title>Bot Rekomendasi Pemilihan Kata yang Sopan</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bot Rekomendasi Pemilihan Kata yang Sopan</h1>
+        <form method="POST">
+            <label for="input_text">Input Teks:</label>
+            <input type="text" name="input_text" id="input_text">
+            <button type="submit">Kirim</button>
+        </form>
+        {% if input_text %}
+        <div class="output">
+            <p><strong>Input Teks:</strong> {{ input_text }}</p>
+            <p><strong>Rekomendasi:</strong> {{ recommended_text }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>    
+{% endblock %}
+

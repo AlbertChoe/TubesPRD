@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template,request
 import openai
 botchats = Blueprint('botchat',__name__)
-openai.api_key = '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'
+openai.api_key = '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'
 @botchats.route('/botchat', methods = ['GET', 'POST'])
 def botchat():
     if request.method == 'POST':

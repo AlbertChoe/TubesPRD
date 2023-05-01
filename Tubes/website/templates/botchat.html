@@ -224,16 +224,21 @@ body {
                 <h1>BrightMind!</h1>
             </div>
             <form method="POST">
-                <label for="input_text">Input Teks:</label>
+                <label for="input_text">Input Teks : </label>
                 <input type="text" name="input_text" id="input_text">
                 <button type="submit">Kirim</button>
             </form>
             <div class="output">
-                <p><strong>Input Teks:</strong> {{ input_text }}</p>
-                <p><strong>Rekomendasi:</strong> {{ recommended_text }}</p>
+                <p><strong>Input Teks : </strong> {{ input_text }}</p>
+                <p><strong>Rekomendasi : </strong> {{ recommended_text }}</p>
+                <p><strong>Rekomendasi lagu : </strong> {{ recommended_songs }}</p>
+                <p><strong>Rekomendasi Kegiatan : </strong> {{ recommended_activities }}</p>
             </div>
             <div class="Sapaan2">
                 <h3>Today is going to be a great day!</h3>
+            </div>
+            <div class="outline">
+              <p><strong>Quote Of The Day : </strong> {{ quoteOTD }}</p>
             </div>
         </div>
     </body>    

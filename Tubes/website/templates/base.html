@@ -16,7 +16,19 @@
     />
 
     <title>{% block title %}Home{% endblock %}</title>
-
+    <style>
+      body {
+      height: 100vh;
+}
+      .image-box {
+        background-image: url("/static/Kelompok 2_Poster.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+      }
+    </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -37,7 +49,7 @@
               </div>
             </div>
           </nav>
-          <div class="container">{% block content %} {% endblock %}</div>
+          <div class="image-box">{% block content %} {% endblock %}</div>
         <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
